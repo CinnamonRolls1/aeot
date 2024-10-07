@@ -41,9 +41,9 @@ const HomePage = () => {
     <div className="min-h-screen bg-white px-40 pt-20">
       <h3 className="text-7xl font-bold font-sans text-center text-gray-800 mb-8">An Ending of Things</h3>
       <Field>
-        <Description className="text-lg text-center text-black/60 mb-1">
-          {yearsSince2017} years ago, we lived out the 'last summer' of our lives. I was there with a camera.
-        </Description>
+      <Description className="text-lg text-center text-black/60 mb-1">
+        {yearsSince2017} years ago, we lived out the &apos;last summer&apos; of our lives. I was there with my camera.
+      </Description>
       </Field>
       <MediaGrid mediaFiles={mediaFiles} openLightbox={openLightbox} />
       {lightboxOpen && (
