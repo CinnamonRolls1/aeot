@@ -24,8 +24,8 @@ const Lightbox = ({ isOpen, onRequestClose, mediaFile }) => {
               autoPlay 
               muted 
               playsInline 
-              loop // Loops the video continuously
-              controls={false} // Ensure video controls are hidden
+              loop 
+              controls={false} 
             >
               <source src={mediaFile.src} type="video/mp4" />
             </video>

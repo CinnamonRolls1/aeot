@@ -12,8 +12,8 @@ const MediaGrid = ({ mediaFiles, openLightbox }) => {
             <Image
               src={file.thumbnail}
               alt={`Media ${index + 1}`}
-              width={500} // Set appropriate width for the image
-              height={500} // Set appropriate height for the image
+              width={500} 
+              height={500} 
               className="w-full h-auto"
               loading="lazy"
             />
@@ -24,10 +24,10 @@ const MediaGrid = ({ mediaFiles, openLightbox }) => {
               width={500}
               height={500}
               className="w-full h-auto"
-              muted // Ensures videos autoplay without sound
-              autoPlay // Starts playing automatically
-              playsInline // Ensures autoplay works on mobile devices
-              loop // Loops the video
+              muted 
+              autoPlay 
+              playsInline 
+              loop 
             />
           ) : null}
         </div>
