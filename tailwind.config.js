@@ -8,13 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['InterVariable'], 
-      },
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        handwriting: ['"Homemade Apple"', 'cursive'],
       },
     },
   },
   plugins: [],
 };
+

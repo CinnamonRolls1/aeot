@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import MediaGrid from '../components/MediaGrid';
 import Lightbox from '../components/Lightbox';
-import { Description, Field } from '@headlessui/react';
 
 const HomePage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -14,7 +13,7 @@ const HomePage = () => {
   const yearsSince2017 = currentYear - 2017;
 
   useEffect(() => {
-    const mediaCount = 33; 
+    const mediaCount = 33;
     const videoIndices = [7, 10, 11, 12, 16, 18, 19, 21, 22, 23, 24, 25, 29, 30];
     const files = Array.from({ length: mediaCount }, (_, i) => {
       const index = mediaCount - i;
@@ -38,13 +37,36 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white px-40 pt-20">
-      <h3 className="text-7xl font-bold font-sans text-center text-gray-800 mb-8">An Ending of Things</h3>
-      <Field>
-      <Description className="text-lg text-center text-black/60 mb-1">
-        {yearsSince2017} years ago, we lived out the &apos;last summer&apos; of our lives. I was there with my camera.
-      </Description>
-      </Field>
+    <div className="min-h-screen bg-white px-8 sm:px-20 pt-12 sm:pt-20">
+      <div className="flex flex-col items-center mb-10">
+        {/* Container for image and number */}
+        <div className="relative inline-block w-auto bg-white ">
+          {/* Main handwritten image */}
+          <img
+            src="/media/other/lines.png"
+            alt="Handwritten heading"
+            className="block max-w-full h-auto"
+          />
+          {/* Overlayed dynamic number */}
+          <span
+            className="
+              absolute
+              font-handwriting
+              text-slate-950
+              text-opacity-80
+              text-[clamp(1rem,4vw,6rem)] // Increased font size
+            "
+            style={{
+              top: '26%', 
+              left: '6%', 
+              transform: 'translate(-50%, -50%)', 
+            }}
+          >
+            {yearsSince2017}
+          </span>
+        </div>
+      </div>
+
       <MediaGrid mediaFiles={mediaFiles} openLightbox={openLightbox} />
       {lightboxOpen && (
         <Lightbox
