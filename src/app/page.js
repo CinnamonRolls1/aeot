@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import MediaGrid from '../components/MediaGrid';
 import Lightbox from '../components/Lightbox';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const HomePage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
