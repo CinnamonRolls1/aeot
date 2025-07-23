@@ -29,6 +29,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {/* Footer */}
+        <footer className="bg-white dark:bg-white text-left text-[11px] sm:text-[13px] md:text-[14px] text-gray-600 w-full px-16 sm:px-40 md:px-64 py-4">
+          This page documents my old Instagram feed&nbsp;— an unpolished (and quite unoptimized) archive of memories from when I was 17 and other ephemera that once lived only on a phone screen. If you're curious about what I'm up to now or you just want to say hello, visit&nbsp;
+          <a href="https://chin.bio" className="underline hover:text-gray-800" target="_blank" rel="noopener noreferrer">chin.bio</a>!
+        </footer>
         <Analytics />
         <SpeedInsights />
       </body>
