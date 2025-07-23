@@ -69,7 +69,10 @@ const HomePage = () => {
         </div>
       </div>
 
-      <MediaGrid mediaFiles={mediaFiles} openLightbox={openLightbox} />
+      {/* Image grid with narrower margins */}
+      <div className="-mx-12 sm:-mx-32 md:-mx-48">
+        <MediaGrid mediaFiles={mediaFiles} openLightbox={openLightbox} />
+      </div>
       {lightboxOpen && (
         <Lightbox
           isOpen={lightboxOpen}
