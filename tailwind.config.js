@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         handwriting: ['"Homemade Apple"', 'cursive'],
+        geist: ['var(--font-geist-sans)', 'sans-serif'],
       },
     },
   },
